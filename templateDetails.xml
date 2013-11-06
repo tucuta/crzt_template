@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+	<name>crzt_realestate</name>
+	<creationDate>Mar 2013</creationDate>
+	<author>CrazyTemplate</author>
+	<authorEmail>info@crazytemplate.com</authorEmail>
+	<authorUrl>http://crazytemplate.com</authorUrl>
+	<copyright>Copyright (C) 2013 CrazyTemplate. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>2.5.0</version>
+	<description>
+	<![CDATA[<link rel="stylesheet" type="text/css" href="../templates/gk_coffe/options/style.css" />
+	      <script type="text/javascript" src="../templates/gk_coffe/options/script.js"></script> 
+	      <style type="text/css" media="all">
+	      <!--
+	      #wrap1 {padding:0px 0px 4px 0px;}
+	      h1 {clear:both;font-family: Georgia, sans-serif;font-size:38px;margin:30px 20px 12px ;padding:0px 0px 24px 10px;color:#333; border-bottom: 1px solid #ccc; font-weight: normal;}
+	      sup { font-style: italic; font-size: }
+	      .wrap2 {background:#fff;padding: 20px; font-family: Arial; font-size:13px; text-align: justify; color: #4d4d4d; line-height: 24px;}
+	      .leftart {margin: 16px 0 0 176px; font-weight:normal!important; }
+	      .livedemo { margin-top: 28px; }
+	      -->
+	      </style>	
+	      
+	      <div id="wrap1">    
+	      <h1>Coffe</h1>
+	      <div class="wrap2">                        
+	      <a title="Visit the official website!" href="http://demo.gavick.com/index.php?year=2011&month=Jan&joomla=16" target="_blank"> <img style="padding-left: 10px;float: left; background-color: #fff;" src="../templates/gk_coffe/images/template_image.jpg" border="0" alt="Logo" /></a>       
+	      <div class="leftart">            
+	      
+	      <p><em>Feel the taste and flavor of the essence of food delivered!</em><br /> Give your customers accurate reflection of services provided.</p>
+	      
+	      <p>Fancy simplifying your business by giving customers a chance to make orders by themselves? Encourage your customers by allowing them to book a room or check your menu on line...</p>
+	      
+	      <p>Knowing that nowadays a well – prepared website is a business card of a company, it's high time for you to catch up with it and use our template to prepare a perfect project.</p>
+	      
+	      <p>Coffe template is appropriate for building restaurant, coffee bar websites, the same as, hotel. Don't waste your time, use this elegant and neat template to create an amazing website!</p>
+	                  
+	      <p class="livedemo"><strong>View Coffe in action <a href="http://demo.gavick.com/index.php?year=2011&month=Jan&joomla=16" target="_blank">here...</a></strong></p></div>
+	      </div>
+	      </div>]]>
+	</description>
+
+	<files>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+		<position>debug</position>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_crzt_realestate.ini</language>
+	</languages>
+
+
+	<config>
+		<fields name="params">
+			<fieldset name="LAYOUT">
+				<field name="layout_top" label="TPL_CRZT_LAYOUT_TOP" type="text" default="1,1,1,1,1,1" />
+				<field name="layout_header" label="TPL_CRZT_LAYOUT_HEADER" type="text" default="1,1,1,1,1,1" />
+				<field name="layout_showcase" label="TPL_CRZT_LAYOUT_SHOWCASE" type="text" default="1,1,1,1,1,1" />
+				<field name="layout_featured" label="TPL_CRZT_LAYOUT_FEATURED" type="text" default="1,1,1,1,1,1" />
+				<field name="layout_utility" label="TPL_CRZT_LAYOUT_UTILITY" type="text" default="1,1,1,1,1,1" />
+				<field name="layout_breadcrumb" label="TPL_CRZT_LAYOUT_BREADCRUMB" type="text" default="6" />
+				
+				<field name="layout_sidebar" label="TPL_CRZT_LAYOUT_SIDEBAR" type="text" default="1,1,1,1" />
+				
+				<field name="layout_mainbottom" label="TPL_CRZT_LAYOUT_MAINBOTTOM" type="text" default="1,1,1,1,1,1" />
+				<field name="layout_extension" label="TPL_CRZT_LAYOUT_EXTENSION" type="text" default="1,1,1,1,1,1" />
+				<field name="layout_bottom" label="TPL_CRZT_LAYOUT_BOTTOM" type="text" default="1,1,1,1,1,1" />
+				<field name="layout_footer" label="TPL_CRZT_LAYOUT_FOOTER" type="text" default="1,1,1,1,1,1" />
+				<field name="layout_copyright" label="TPL_CRZT_LAYOUT_COPYRIGHT" type="text" default="1,1,1,1,1,1" />
+			</fieldset>
+			<fieldset name="HEAD">
+				<field name="google_analytics" type="text" default="" 
+					label="TPL_CRZT_GOOGLE_ANALYTICS"
+					description="TPL_CRZT_GOOGLE_ANALYTICS_DESC" />
+				<field name="google_webmastertools" type="text" default=""
+					label="TPL_CRZT_GOOGLE_WEBMASTERTOOLS"
+					description="TPL_CRZT_GOOGLE_WEBMASTERTOOLS_DESC"
+					/>
+				
+			</fieldset>
+			<fieldset name="CACHE">
+				<field name="css_cache" type="list" default="center"
+					label="TPL_CRZT_CSS_CACHE"
+					filter="word"
+				>
+					<option value="no">No</option>
+					<option value="yes">Yes</option>
+				</field>
+				<field name="js_cache" type="list" default="center"
+					label="TPL_CRZT_JS_CACHE"
+					filter="word"
+				>
+					<option value="no">No</option>
+					<option value="yes">Yes</option>
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

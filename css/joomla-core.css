@@ -1,0 +1,230 @@
+
+/* Layout */
+.component-content .row-separator {display: block;clear: both;margin: 0;border: 0;height: 1px;}
+.component-content .item-separator {display: none;margin: 0;}
+.component-content .shownocolumns {width: 98% !important;}
+.component-content .cols-1 {display: block;float: none !important;margin: 0 !important;}
+.component-content .cols-2 .column-1 {width: 46%;float: left;}
+.component-content .cols-2 .column-2 {width: 46%;float: right;margin: 0;}
+.component-content .cols-3 .column-1 {float: left;width: 29%;margin-right: 7%;}
+.component-content .cols-3 .column-2 {float: left;width: 29%;margin-left: 0;}
+.component-content .cols-3 .column-3 {float: right;width: 29%;padding: 10px 0;}
+.component-content .items-row {margin-bottom: 10px !important;}
+.component-content .column-1, .component-content .column-2, .component-content .column-3 {padding: 10px 0;}
+.component-content .column-2 {width: 55%;margin-left: 40%;}
+.component-content .column-3 {width: 30%;}
+.component-content .blog-more {padding: 10px 5px;}
+
+/* Categories List */
+.categories-list {padding: 0 5px;}
+.categories-list ul {margin: 0 0 0 20px;padding:0;}
+.categories-list ul li {padding: 5px;list-style-type: none;margin: 0;}
+.categories-list ul ul {margin-left: 15px;}
+.categories-list dl dt, .categories-list dl dd {display: inline;}
+.category-desc {line-height: 1.7em;margin: 10px 0;padding-left: 0;}
+
+/* Article Details */
+.component-content .actions {float: right;margin-top: 10px;}
+.component-content .actions li {list-style: none;display: inline-block;}
+.component-content .article-info {display: block;margin: 10px -15px;padding: 10px 20px;}
+.component-content .article-info dd {;margin-right: 10px;display: inline-block;}
+.component-content .article-info .article-info-term {display: none;}
+.component-content .actions li img[src $="printButton.png"], .component-content .actions li img[src $="emailButton.png"], .component-content .actions li img[src $="edit.png"] {height: 0;width: 20px;padding-top: 17px;}
+.component-content .actions li img {opacity: 0.3;}
+.component-content .actions li img:hover {opacity: 0.6;}
+.component-content .actions li a {height: 17px;padding: 0 2px;display: block;}
+.component-content .actions .email-icon img {background-position: 0 -26px;}
+.component-content .actions .edit-icon img {background-position: 0 -51px;}
+.component-content .content_vote {margin: 10px 0;}
+
+/* Article */
+.component-content .blog-featured h2, .component-content .blog h2, .component-content .item-page h2 {margin-top: 0;}
+.component-content .item-page h2, .component-content .blog h2, .component-content .weblink-category h2, .component-content .contact h2, .component-content .login h1 {font-size: 26px;}
+.component-content .pagenav li {list-style: none;border-radius: 3px;}
+.component-content .pagenav li a {padding: 5px 8px;}
+.component-content .pagenav .pagenav-prev {float: left;}
+.component-content .pagenav .pagenav-next {float: right;}
+.component-content .items-leading {margin-bottom: 25px;}
+
+/* Editing */
+.component-content .edit #editor-xtd-buttons a:link, .component-content .edit #editor-xtd-buttons a:visited, .component-content .edit #editor-xtd-buttons a:hover {color: #323232;}
+.component-content .edit .inputbox, .component-content .edit textarea {border: 1px solid #ddd;}
+.component-content .edit legend {font-size: 150%;}
+.component-content .edit #adminForm fieldset {padding: 20px 15px;margin: 10px 0 15px 0;}
+.component-content .formelm {margin: 5px 0;}
+.component-content .formelm label {width: 9em;display: inline-block;vertical-align: top;}
+.component-content #adminForm .formelm-area {padding: 5px 0;}
+.component-content #adminForm .formelm-area label {vertical-align: top;display: inline-block;width: 7em}
+.component-content .formelm-buttons {text-align: right;margin-bottom: 10px}
+.component-content .button2-left {float: left;margin-right: 5px;margin-top: 10px;}
+.component-content .button2-left .readmore {background-image: none;background-color: transparent;border: none;padding: 0;text-shadow: none;font-size: inherit;text-transform: inherit;}
+.calendar td.button {background-image: none;background-color: transparent;border: none;padding: 0;text-shadow: none;font-size: inherit;text-transform: inherit;color: #000;display: table-cell;}
+
+/* Items More */
+.component-content .items-more {padding-top: 10px;}
+.component-content .items-more h3 {font-weight: normal;margin: 0;padding: 5px 5px 5px 5px;font-size: 1.4em;}
+.component-content .items-more ol {line-height: 1.3em;list-style-type: none;margin: 0;padding: 10px 0 10px 2px;}
+.component-content .items-more ol li {padding: 2px;}
+.component-content .items-more ol li a {display: inline;font-weight: normal;padding: 5px 5px 5px 20px;background-position: 6px -411px;background-repeat: no-repeat;}
+.component-content .items-more ol li a:hover, .items-more ol li a:focus {font-weight: normal;padding: 5px 5px 5px 20px;text-decoration: none;background-position: 6px -301px;}
+
+/* Pagination */
+.component-content .pagination {margin: 10px 0;padding: 10px 0;clear: both;}
+.component-content .pagination .counter {text-align: center;margin: 0;}
+.component-content .pagination ul {list-style-type: none;margin: 0;padding: 0;text-align: center;}
+.component-content .pagination li {display: inline;padding: 2px 5px;text-align: center;}
+.component-content .pagenav {padding: 2px;clear: both;}
+.component-content .pagination-start, .component-content .pagination-next, .component-content .pagination-end, .component-content .pagination-prev {border: 0;}
+.component-content .pagination-start, .component-content .pagination-start span {padding: 0;}
+.counter {font-weight: bold;}
+
+/* Core Components - Member Access */
+#password-lbl, #username-lbl {width: 130px;display: block;float: left;font-size: 120%;}
+.login-fields #username, .login-fields #password, #contact-form dd input, #contact-form dd textarea, #modlgn-username, #modlgn-passwd, #jform_email, #member-registration dd input, #search-searchword, .finder .inputbox {padding: 4px;border-radius: 3px;line-height: 1.6em;}
+.component-content .login fieldset div {margin-bottom: 8px;}
+.component-content .login + div {margin-top: 12px;}
+.component-content .login + div ul li, #login-form li {list-style: none;}
+.component-content .login + div ul li a, #login-form a {padding: 4px 0 4px 15px;line-height: 100%;font-weight: normal;font-size: 100%;display: inline-block;background-repeat: no-repeat;background-position: 2px -413px;}
+.component-content .login + div ul li a:hover, #login-form a:hover {background-position: 2px -303px;}
+.component-content .login + div ul {padding: 0;}
+.component-content .login-description {margin: 10px 0;}
+
+/* Mod Login */
+#login-form label {width: 85px;display: block;float: left;}
+#login-form .userdata {margin: 12px 0;}
+#login-form #modlgn-remember {width: 10px;height: 10px;}
+#login-form ul {padding: 0;}
+
+/* Mod Breadcrumbs */
+.breadcrumbs img[src $="arrow.png"] {height: 0;width: 10px;margin-top: 6px;padding-top: 12px;background-position: 3px -415px;background-repeat: no-repeat;}
+
+/* Tables */
+.component-content table {border-collapse: collapse;}
+.component-content table.weblinks, .component-content table.category {font-size: 1em;margin: 10px 10px 20px 0;width: 99%;}
+.component-content table.weblinks td {border-collapse: collapse;}
+.component-content table.weblinks td, .component-content table.category td {padding: 7px;}
+.component-content table.weblinks th, .component-content table.category th {padding: 7px;text-align: left;}
+.component-content .num {vertical-align: top;text-align: left;}
+.component-content .hits {vertical-align: top;text-align: center;}
+.component-content td p {margin: 0;line-height: 1.3em;}
+.component-content .filter {margin: 10px 0;}
+.component-content .display-limit, .component-content .filter {text-align: right;margin-right: 7px;}
+.component-content table.category th a img {padding: 2px 10px;}
+.component-content .filter-search {float: left;}
+.component-content .filter-search .inputbox {width: 6em;}
+.component-content .element-invisible {position: absolute;margin-left: -3000px;margin-top: -3000px;height: 0;}
+.component-content .cat-items {margin-top: 20px;}
+
+/* Forms */
+.component-content #member-registration {padding: 0 5px;}
+.component-content form fieldset dt {clear: left;float: left;width: 12em;padding: 3px 0;}
+.component-content form fieldset dd {float: left;padding: 3px 0;}
+
+/* Search */
+.component-content .searchintro {font-weight: normal;margin: 20px 0 20px;}
+.component-content #searchForm, .component-content #finder-search {padding: 0 5px;}
+.component-content .form-limit {margin: 20px 0 0;text-align: right;padding: 0 10px 0 20px;}
+.component-content .highlight {font-weight: bold;}
+.component-content .ordering-box {width: 40%;float: right;}
+.component-content .phrases-box {width: 60%;float: left;}
+.component-content .only, .component-content .phrases {margin: 10px 0 0 0;padding: 15px;line-height: 1.3em;}
+.component-content label.ordering {display: block;margin: 10px 0 10px 0;}
+.component-content .word {padding: 10px 10px 10px 0;}
+.component-content .word input {font-weight: bold;margin: 0 10px;padding: 4px;font-size: 1em;}
+.component-content .word label {font-weight: bold;}
+.component-content fieldset.only label, .component-content fieldset.phrases label {margin: 0 10px 0 0;}
+.component-content .ordering-box label.ordering {margin: 0 10px 5px 0;float: left;}
+.component-content form .search label, .component-content form .finder label {display: none;}
+.component-content form #finder-filter-select-list label {display: block;margin-top: 10px;margin-bottom: 2px;}
+.component-content .search legend {font-weight: bold;}
+.component-content .search-results .result-title {padding: 15px 15px 0 5px;font-weight: bold;}
+.component-content .search-results dd {padding: 2px 15px 2px 5px;}
+.component-content .search-results .result-text {padding: 10px 15px 10px 5px;line-height: 1.7em;}
+.component-content .search-results .result-url {font-size: 90%;padding: 2px 15px 15px 5px;}
+.component-content .search-results .result-created {padding: 2px 15px 15px 5px;}
+.component-content .search-results .result-category {padding: 10px 15px 5px 5px;}
+
+/* Contacts */
+.component-content .contact {padding: 0 5px;}
+.component-content .contact-category {padding: 0 10px;}
+.component-content .contact-category #adminForm .filters {border: 0;padding: 0;}
+.component-content .contact-image {margin: 10px 0;overflow: hidden;}
+.component-content address {font-style: normal;margin: 10px 0;}
+.component-content address span {display: block;}
+.component-content .contact-address {margin: 20px 0 10px 0;}
+.component-content .contact-email div {padding: 2px 0;margin: 0 0 10px 0;}
+.component-content .contact-email label {width: 17em;float: left;}
+.component-content span.contact-image {margin-bottom: 10px;overflow: hidden;display: block;}
+.component-content #contact-textmsg {padding: 2px 0 10px 0;}
+.component-content #contact-email-copy {float: left;margin-right: 10px;}
+.component-content .contact .button {float: none !important;clear: left;display: block;margin: 20px 0 0 0;}
+.component-content dl.tabs {float: left;margin: 50px 0 0 0;z-index: 50;clear: both;}
+.component-content dl.tabs dt {float: left;padding: 4px 10px;border-left: 1px solid #ccc;border-right: 1px solid #ccc;border-top: 1px solid #ccc;margin-right: 3px;background: #f0f0f0;color: #666;}
+.component-content dl.tabs .open {background: #F9F9F9;border-bottom: 1px solid #F9F9F9;z-index: 100;color: #000;}
+.component-content .current {clear: both;border: 1px solid #ccc;padding: 10px 10px;}
+.component-content .current dd {padding: 0;margin: 0;}
+.component-content #content-pane.tabs {margin: 1px 0 0 0;}
+
+/* User Profile */
+.component-content #users-profile-core, .component-content #users-profile-custom {margin: 10px 0 15px 0;padding: 15px;}
+.component-content #users-profile-core dt, .component-content #users-profile-custom dt {float: left;width: 12em;padding: 3px 0;}
+.component-content #users-profile-core dd, .component-content #users-profile-custom dd {padding: 3px 0;}
+.component-content #member-profile fieldset, .component-content .registration fieldset {margin: 10px 0 15px 0;padding: 15px;}
+.component-content #users-profile-core legend, .component-content #users-profile-custom legend, .component-content .profile-edit legend, .component-content .registration legend {font-weight: bold;}
+.component-content .profile-edit #member-profile fieldset dd, .component-content .registration #member-registration fieldset dd {float: none;padding: 5px 0;}
+.component-content .profile-edit #member-profile fieldset dd input, .component-content .profile-edit #member-profile fieldset dd select, .component-content .registration #member-registration fieldset dd input {width: 17em;}
+.component-content .profile-edit #member-profile fieldset dt, .component-content .registration #member-registration fieldset dt {padding: 5px 5px 5px 0;width: 13em;}
+.component-content .optional {font-size: 0.9em;}
+
+/* Editor */
+.component-content .contentpaneopen_edit {float: left;}
+.component-content .mceButton:hover {background: none !important;}
+
+.component-content legend {padding: 3px 5px;}
+.component-content .edit #adminForm fieldset {padding: 20px 15px;margin: 10px 0 15px 0;}
+.component-content .formelm {margin: 5px 0}
+.component-content .formelm label {width: 13em;display: inline-block;vertical-align: top;}
+.component-content #adminForm .formelm-area {padding: 5px 0}
+.component-content #adminForm .formelm-area label {vertical-align: top;display: inline-block;width: 7.9em}
+.component-content .formelm-buttons {text-align: right;margin-bottom: 10px}
+.component-content .modal-button, .component-content .button2-left .blank a, .component-content .button2-left a, .component-content .button2-left .readmore a {background: #eee;padding: 4px !important;margin: 0 !important;line-height: 1.2em;border: solid 1px #ddd;font-weight: bold;text-decoration: none;margin-top: 10px !important}
+
+/* Pagebreak */
+.component-content table.contenttoc {padding: 10px;margin: 10px;}
+.component-content table.contenttoc tr td {padding: 1px 0;}
+.component-content .pagenavcounter {font-weight: bold;}
+
+/* Tooltip */
+.component-content .tip {font-size: 0.8em;text-align: left;padding: 3px;max-width: 400px;}
+.component-content .tip-title {font-weight: bold;}
+.tip-wrap {padding: 8px;border-radius: 4px;}
+
+/* OpenID icon style */
+.system-openid, .com-system-openid { background: url(http://openid.net/images/login-bg.gif) no-repeat;background-color: #fff;background-position: 0 50%;color: #000;padding-left: 18px;}
+
+/* Unpublished */
+.system-unpublished {background: #e8edf1;border-top: 4px solid #c4d3df;border-bottom: 4px solid #c4d3df;}
+
+/* System Messages */
+#system-message {margin-bottom: 10px;padding: 0;}
+#system-message dt {font-weight: bold; }
+#system-message dd {margin: 0;font-weight: bold; }
+#system-message dd ul {background: #BFD3E6;color: #0055BB;margin: 10px 0 10px 0;list-style: none;padding: 10px;border: 2px solid #84A7DB;}
+
+/* System Error Messages */
+#system-message dt.error {display: none;}
+#system-message dd.error ul {color: #c00;background-color: #EBC8C9;border: 2px solid #DE7A7B;}
+
+/* System Notice Messages */
+#system-message dt.notice {display: none;}
+#system-message dd.notice ul {color: #A08B4C;background: #F5ECC1;border: 2px solid #F0DC7E;}
+
+/* Debug */
+#system-debug {color: #ccc;background-color: #fff;padding: 10px;margin: 10px;}
+#system-debug div {font-size: 11px;}
+
+/* Cookie Note */
+#cookie-note{width:100%;text-align:center;background:#E55E48;color:#FFFFFF;position:absolute;bottom:0px;}
+.cookie-note-info{margin:15px 0 10px 0;max-width:90%;}
+.crzt-cookie-note-close{color: #FFFFFF;display: block;float: right;font-size: 28px;font-weight: bold;height: 52px;line-height: 52px;text-decoration: none;width: 52px;background:#C33C26;}
+.crzt-cookie-note-close:hover{background:#282828;text-decoration:none;color:#FFFFFF;}
