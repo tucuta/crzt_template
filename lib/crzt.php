@@ -40,14 +40,14 @@ class CRZT{
 
 
 		if($this->modules($name."-a") or $this->modules($name."-b") or $this->modules($name."-c") or $this->modules($name."-d") or $this->modules($name."-e") or $this->modules($name."-f") ){ 	
-		echo "<div class=\"$class_row\">";
+		echo "<div id=\"outer-$name\" class=\"$class_row\">";
 		
 		$count = 0;
 		$layout = explode(",",$this->getParam('layout_'.$name, 1));
 		for($i=0;$i<count($layout);$i++){
 			if($this->modules($name.'-'.$this->positions_letters[$i])){
 			
-				echo '<div class="span'.($layout[$i]*2).' '.$class_mod.'" id="'.$name.'-'.$this->positions_letters[$i].'"><jdoc:include type="modules" name="'.$name.'-'.$this->positions_letters[$i].'"   /></div>';
+				echo '<div class="span'.($layout[$i]*2).' '.$class_mod.'" id="'.$name.'-'.$this->positions_letters[$i].'"><jdoc:include type="modules" name="'.$name.'-'.$this->positions_letters[$i].'" style="xhtml"  /></div>';
 			
 			$count = $count + $layout[$i];
 				if($count>=$this->max_columns){
@@ -70,7 +70,7 @@ class CRZT{
 		for($i=0;$i<2;$i++){
 			if($this->modules($name.'-'.$this->positions_letters[$i])){
 			
-				echo '<div class="span'.($layout[$i]*2).' '.$class_mod.'" id="sidebar-'.$this->positions_letters[$i].'"><jdoc:include type="modules" name="'.$name.'-'.$this->positions_letters[$i].'"   /></div>';
+				echo '<div class="span'.($layout[$i]*2).' '.$class_mod.'" id="sidebar-'.$this->positions_letters[$i].'"><jdoc:include type="modules" name="'.$name.'-'.$this->positions_letters[$i].'"  style="xhtml"  /></div>';
 			
 				$count = $count + $layout[$i];
 				if($count>=2){
@@ -110,7 +110,7 @@ class CRZT{
 		for($i=2;$i<4;$i++){
 			if($this->modules($name.'-'.$this->positions_letters[$i])){
 			
-				echo '<div class="span'.($layout[$i]*2).' '.$class_mod.'" id="sidebar-'.$this->positions_letters[$i].'"><jdoc:include type="modules" name="'.$name.'-'.$this->positions_letters[$i].'"   /></div>';
+				echo '<div class="span'.($layout[$i]*2).' '.$class_mod.'" id="sidebar-'.$this->positions_letters[$i].'"><jdoc:include type="modules" name="'.$name.'-'.$this->positions_letters[$i].'" style="xhtml"  /></div>';
 			
 			$count = $count + $layout[$i];
 				if($count>=2){
