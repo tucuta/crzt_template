@@ -164,6 +164,7 @@ class CRZT{
         $scripts = array();
         $css_urls = array();
 
+	if(!defined('DS')) define('DS', DIRECTORY_SEPARATOR);
 
 	if ($cache_css=="yes") {
                foreach ($document->_styleSheets as $strSrc => $strAttr) {
