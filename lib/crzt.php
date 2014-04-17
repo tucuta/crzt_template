@@ -128,7 +128,6 @@ class CRZT{
 
 	    $document->addStyleSheet($this->API->baseurl."/templates/".$this->API->template."/lib/bootstrap/css/bootstrap.css");	    
 	    $document->addStyleSheet($this->API->baseurl."/templates/".$this->API->template."/css/joomla-core.css");	    
-	    $document->addStyleSheet($this->API->baseurl."/templates/".$this->API->template."/lib/fonts/bebasneue/stylesheet.css");	    
 	    $document->addStyleSheet($this->API->baseurl."/templates/".$this->API->template."/css/template.css");	    
 
 	    if($this->getParam('google_analytics', '')){
@@ -167,37 +166,36 @@ class CRZT{
 	if(!defined('DS')) define('DS', DIRECTORY_SEPARATOR);
 
 	if ($cache_css=="yes") {
-               foreach ($document->_styleSheets as $strSrc => $strAttr) {
-                    if (!preg_match('/\?.{1,}$/', $strSrc) && (!isset($strAttr['media']) || $strAttr['media'] == '')) {
-                         $break = false;
-                         if(count($toRemove) > 0) {
-                              foreach ($toRemove as $remove) {
-                                   $remove = str_replace(' ', '', $remove);
-                                   if(strpos($strSrc, $remove) !== false) {
-                                        $toAddURLs[] = $strSrc;
-                                        $break = true;
-                                        continue;
-                                   }
-                              }
-                         }
-                         if(!$break) {   
-                              if (!preg_match('/\?.{1,}$/', $strSrc)) {
-                                   $srcurl = $this->cleanUrl($strSrc);
-                                   if (!$srcurl) continue;
-                                   //remove this css and add later
-                                        unset($document->_styleSheets[$strSrc]);
-                                        $path = str_replace('/', DS, $srcurl);
-                                        $css_urls[] = array(JPATH_SITE . DS . $path, JURI::base(true) . '/' . $srcurl);
-         
-                              }
-                         }
-                    }
-               }
-          	
+		foreach ($document->_styleSheets as $strSrc => $strAttr) { 
+				if (!preg_match('/\?.{1,}$/', $strSrc) && (!isset($strAttr['media']) || $strAttr['media'] == '')) {
+					$break = false;
+					if(count($toRemove) > 0) {
+						foreach ($toRemove as $remove) {
+							$remove = str_replace(' ', '', $remove);
+							if(strpos($strSrc, $remove) !== false) {
+								$toAddURLs[] = $strSrc;
+								$break = true;
+								continue;
+							}
+						}
+					}
+					if(!$break) {    
+						if (!preg_match('/\?.{1,}$/', $strSrc)) {
+							$srcurl =$this->cleanUrl($strSrc);
+							if (!$srcurl) continue;
+							//remove this css and add later
+								unset($document->_styleSheets[$strSrc]);
+								$path = str_replace('/', DS, $srcurl);
+								$css_urls[] = array(JPATH_SITE . DS . $path, $srcurl);
+		
+							//$document->_styleSheets = array();
+						}
+					}
+				}
+		}
 	       foreach($toAddURLs as $url) $document->addStylesheet($url);
-               
 	       $url = $this->optimizecss($css_urls, 'false');
-               if ($url) {
+	       if ($url) {
                     $document->addStylesheet($url);
                } else {
                     foreach ($css_urls as $urls) $document->addStylesheet($url[1]); //re-add stylesheet to head
@@ -253,34 +251,31 @@ class CRZT{
     }
 
     public function optimizecss($css_urls, $overwrite = false) {
-        $content = '';
+	$content = '';
         $files = '';
-          jimport('joomla.filesystem.file');
+       
         foreach ($css_urls as $url) {
             $files .= $url[1];
+            
             //join css files into one file
-            $content .= "/* FILE: {$url[1]} */\n" . $this->compresscss(@JFile::read($url[0]), $url[1]) . "\n\n";
+            $content .= "/* FILE: {$url[1]} */\n" . $this->compresscss(JFile::read($url[1]), $url[1]) . "\n\n";
         }
-       
+        
         $file = md5($files) . '.css';
-          if($this->useGZip()) $file = $file.'.php';
-         
-         
-         
-          //$url = store_file($content, $file, $overwrite);
-         
-          $expireHeader = (int) 30 * 24 * 60 * 60;
-          if($this->useGZip()) {
-               $headers = "<?php if(extension_loaded('zlib')){ob_start('ob_gzhandler');} header(\"Content-type: text/css\");";
-               $headers .= "header(\"Content-Encoding: gzip\");";
-          }
-          $headers .= "header('Expires: " . gmdate('D, d M Y H:i:s', strtotime(date('D, d M Y H:i:s')) + $expireHeader) . " GMT');";
-          $headers .= "header('Last-Modified: " . gmdate('D, d M Y H:i:s', strtotime(date('D, d M Y H:i:s'))) . " GMT');";
-          $headers .= "header('Cache-Control: Public');";
-          $headers .= "header('Vary: Accept-Encoding');?>";
-         
-          $content = $headers . $content;
-         
+		if($this->useGZip()) $file = $file.'.php';
+
+		$expireHeader = (int) 30 * 24 * 60 * 60;
+		if($this->useGZip()) {
+			$headers = "<?php if(extension_loaded('zlib')){ob_start('ob_gzhandler');} header(\"Content-type: text/css\");";
+			$headers .= "header(\"Content-Encoding: gzip\");";
+		}
+		$headers .= "header('Expires: " . gmdate('D, d M Y H:i:s', strtotime(date('D, d M Y H:i:s')) + $expireHeader) . " GMT');";
+		$headers .= "header('Last-Modified: " . gmdate('D, d M Y H:i:s', strtotime(date('D, d M Y H:i:s'))) . " GMT');";
+		$headers .= "header('Cache-Control: Public');";
+		$headers .= "header('Vary: Accept-Encoding');?>";
+		
+		$content = $headers . $content;
+
         $url = $this->store_file($content, $file, $overwrite);
         return $url;
     }	
@@ -326,7 +321,7 @@ class CRZT{
         }
        
      
-        $file = md5($files) . '.js';
+          $file = md5($files) . '.js';
           if($this->useGZip()) $file = $file.'.php';
                    
           $path = JPATH_SITE . DS . 'cache' . DS . 'gk'. DS . $file;
@@ -356,7 +351,7 @@ class CRZT{
 
     public function compressjs($data) {
         require_once(dirname(__file__) . DS . 'minify' . DS . 'JSMin.php');
-            $data = JSMin::minify($data);
+    	$data = JSMin::minify($data);
         return $data;
     } 
 
@@ -385,13 +380,14 @@ class CRZT{
           }
      }
 
-     public function store_file($data, $filename, $overwrite = false) {
-        $path = JPATH_SITE . DS . 'cache' . DS . 'crzt';
-        if (!is_dir($path)) @JFolder::create($path);
+    public function store_file($data, $filename, $overwrite = false) {
+ 	$path = 'cache' . DS . 'crzt';
+        jimport('joomla.filesystem.folder');
+        if (!is_dir($path)) JFolder::create($path);
         $path = $path . DS . $filename;
-        $url = JURI::base(true) . '/cache/crzt/' . $filename;
+        $url = JURI::base(true) .DS. 'cache'. DS .'crzt' . DS. $filename;
         if (is_file($path) && !$overwrite) return $url;
-        @file_put_contents($path, $data);
+        JFile::write($path, $data);
         return is_file($path) ? $url : false;
     }
     public function replaceurl($matches) {
