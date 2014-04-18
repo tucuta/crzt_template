@@ -196,9 +196,13 @@ class CRZT{
 	       foreach($toAddURLs as $url) $document->addStylesheet($url);
 	       $url = $this->optimizecss($css_urls, 'false');
 	       if ($url) {
+		    $url = str_replace( DS ,'/', $url);
                     $document->addStylesheet($url);
                } else {
-                    foreach ($css_urls as $urls) $document->addStylesheet($url[1]); //re-add stylesheet to head
+		       foreach ($css_urls as $urls) {
+		    	       $urls[1] = str_replace( DS ,'/', $urls[1]);
+			       $document->addStylesheet($urls[1]); //re-add stylesheet to head
+		       }
                }
         }
         
@@ -241,9 +245,13 @@ class CRZT{
           // optimize or re-add
        	  $url = $this->optimizejs($js_urls, false);
           if ($url) {
+ 	    $url = str_replace( DS ,'/', $url);
             $document->addScript($url);
           } else {
-              foreach ($js_urls as $urls) $document->addScript($url[1]); //re-add stylesheet to head
+		  foreach ($js_urls as $urls){
+		    	  $urls[1] = str_replace( DS ,'/', $urls[1]);
+			  $document->addScript($urls[1]); //re-add stylesheet to head
+		  }
           }
              // re-add external scripts
           foreach($toAddURLs as $url) $document->addScript($url); 
@@ -324,7 +332,7 @@ class CRZT{
           $file = md5($files) . '.js';
           if($this->useGZip()) $file = $file.'.php';
                    
-          $path = JPATH_SITE . DS . 'cache' . DS . 'gk'. DS . $file;
+          $path = JPATH_SITE . DS . 'cache' . DS . 'crzt'. DS . $file;
          
           if (is_file($path) && filesize($path) > 0) {
                // skip compression and leave current URL
