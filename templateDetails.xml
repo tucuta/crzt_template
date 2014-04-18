@@ -146,7 +146,9 @@
 					<option value="no">No</option>
 					<option value="yes">Yes</option>
 				</field>
-				
+				<field name="jscss_excluded" type="textarea" rows="3" cols="30" label="TPL_CRZT_LANG_EXCLUDEJSCSS" description="TPL_CRTZ_LANG_EXCLUDEJSCSS_DESC" />
+                                <field name="css_custom" type="textarea" rows="6" cols="40" label="TPL_CRZT_LANG_CSS_CUSTOM" description="TPL_CRZT_LANG_CSS_CUSTOM_DESC" />
+                                <field name="js_custom" type="textarea" rows="6" cols="40" label="TPL_CRZT_LANG_JS_CUSTOM" description="TPL_CRZT_LANG_JS_CUSTOM_DESC" />
 			</fieldset>
 		</fields>
 	</config>

@@ -131,13 +131,18 @@ class CRZT{
 	    $document->addStyleSheet($this->API->baseurl."/templates/".$this->API->template."/css/template.css");	    
 
 	    if($this->getParam('google_analytics', '')){
-		$script =  '<script type="text/javascript">var _gaq = _gaq || []; _gaq.push([\'_setAccount\', \'' .$this->getParam('google_analytics', ''). '\']); _gaq.push([\'_trackPageview\']);(function() { var ga = document.createElement(\'script\'); ga.type = \'text/javascript\'; ga.async = true;ga.src = (\'https:\' == document.location.protocol ? \'https://ssl\' : \'http://www\') + \'.google-analytics.com/ga.js\';var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(ga, s); })();</script>';
-		$document->addScriptDeclaration($script, $type);
+		$script =  'var _gaq = _gaq || []; _gaq.push([\'_setAccount\', \'' .$this->getParam('google_analytics', ''). '\']); _gaq.push([\'_trackPageview\']);(function() { var ga = document.createElement(\'script\'); ga.type = \'text/javascript\'; ga.async = true;ga.src = (\'https:\' == document.location.protocol ? \'https://ssl\' : \'http://www\') + \'.google-analytics.com/ga.js\';var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(ga, s); })();';
+		$document->addScriptDeclaration($script, "text/javascript");
 	    }
 	    if($this->getParam('google_webmastertools', '')){
 		echo '<meta name="google-site-verification" content="'.$this->getParam('google_webmastertools', '').'" />';
 	    }
-
+	    if($this->getParam('css_custom', '')){
+		$document->addStyleDeclaration($this->getParam('css_custom', ''), "text/css");
+	    }
+	    if($this->getParam('js_custom', '')){
+		$document->addScriptDeclaration($this->getParam('js_custom', ''), "text/javascript");
+	    }
 	    $this->cache();
 
     }
