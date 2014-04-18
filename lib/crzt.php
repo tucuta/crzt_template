@@ -195,11 +195,9 @@ class CRZT{
 	       foreach($toAddURLs as $url) $document->addStylesheet($url);
 	       $url = $this->optimizecss($css_urls, 'false');
 	       if ($url) {
-		    $url = str_replace('\\' ,'/', $url);
                     $document->addStylesheet($url);
                } else {
 		       foreach ($css_urls as $urls) {
-		    	       $urls[1] = str_replace('\\' ,'/', $urls[1]);
 			       $document->addStylesheet($urls[1]); //re-add stylesheet to head
 		       }
                }
@@ -244,11 +242,9 @@ class CRZT{
           // optimize or re-add
        	  $url = $this->optimizejs($js_urls, false);
           if ($url) {
- 	    $url = str_replace('\\' ,'/', $url);
             $document->addScript($url);
           } else {
 		  foreach ($js_urls as $urls){
-		    	  $urls[1] = str_replace('\\' ,'/', $urls[1]);
 			  $document->addScript($urls[1]); //re-add stylesheet to head
 		  }
           }
@@ -392,7 +388,7 @@ class CRZT{
         jimport('joomla.filesystem.folder');
         if (!is_dir($path)) JFolder::create($path);
         $path = $path . DS . $filename;
-        $url = JURI::base(true) .DS. 'cache'. DS .'crzt' . DS. $filename;
+        $url = JURI::base(true).'/cache/crzt/'. $filename;
         if (is_file($path) && !$overwrite) return $url;
         JFile::write($path, $data);
         return is_file($path) ? $url : false;
