@@ -164,7 +164,6 @@ class CRZT{
         $css_urls = array();
 
 	if(!defined('DS')) define('DS', DIRECTORY_SEPARATOR);
-	define('DS', '\\');
 	if ($cache_css=="yes") {
 		foreach ($document->_styleSheets as $strSrc => $strAttr) { 
 				if (!preg_match('/\?.{1,}$/', $strSrc) && (!isset($strAttr['media']) || $strAttr['media'] == '')) {
